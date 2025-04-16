@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicidad Urbana</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #2a0a3a, #000);
+            flex-direction: column;
+        }
+        .menu {
+            display: flex;
+            width: 100vw;
+            height: 90vh;
+            position: relative;
+        }
+        .menu-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            position: relative;
+            background: linear-gradient(180deg, rgba(42, 10, 58, 0.6), rgba(0, 0, 0, 0.4));
+            padding: 20px;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+        .menu-item:hover {
+            background: rgba(42, 10, 58, 0.7);
+        }
+        .menu-item span {
+            margin-top: 10px;
+            font-size: 15px;
+            font-family: 'Open Sans', sans-serif;
+            font-style: oblique;
+            color: rgba(255, 255, 180, 0.9);
+            text-align: center;
+            max-width: 80%;
+            font-weight: lighter;
+        }
+        .separator {
+            width: 50%;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 10px 0;
+        }
+        .footer {
+            width: 100vw;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 3px rgba(255, 255, 0, 0.6), 0 0 6px rgba(255, 255, 0, 0.4), 0 0 9px rgba(255, 255, 0, 0.2);
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 3px rgba(255, 255, 0, 0.6), 0 0 6px rgba(255, 255, 0, 0.4), 0 0 9px rgba(255, 255, 0, 0.2);
+                color: white;
+            }
+            100% {
+                text-shadow: 0 0 6px rgba(255, 200, 0, 0.8), 0 0 9px rgba(255, 200, 0, 0.6), 0 0 12px rgba(255, 200, 0, 0.4);
+                color: yellow;
+            }
+        }
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                height: auto;
+                overflow-y: auto;
+            }
+            .menu-item {
+                flex: none;
+                width: 100%;
+                padding: 20px 0;
+            }
+            .footer {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+  <div class="menu">
+      <div class="menu-item" onclick="openPage('https://docs.google.com/spreadsheets/d/1cE01IXDSVy0Oo9bXxlCNELPfIQAZsyEu2BdNgh1SGrY/edit?usp=sharing')">
+          CONTROL<br>DE<br>ACTIVIDADES
+          <div class="separator"></div>
+          <span>Destácate e informa de manera concreta, las actividades que realizaste en una jornada de trabajo. 
+            <br>No olvides que tienes máximo 24 horas de pasada la misma.
+           </span>
+      </div>
+      <div class="menu-item" onclick="openPage('https://docs.google.com/spreadsheets/d/1RTVn0q-g2OH12Y2KnYwuuhVhSMngjS6lqfaXqm6QQIM/edit?gid=1761064970#gid=1761064970')">
+          CORRELATIVOS<BR>AREA<BR>TECNICA
+          <div class="separator"></div>
+          <span>Obtén un numero correlativo para el documento que estas realizando.
+            <BR>Trata de no omitir ningún dato solicitado, y asi se podrá hacer seguimiento.
+           </span>
+      </div>
+      <div class="menu-item" onclick="openPage('https://docs.google.com/spreadsheets/d/1vHyco-6_uGyB-ZLznRTPSyYw-_IdTIHscgHyMRT_aSs/edit?usp=sharing')">
+        CORRELATIVOS<BR>
+        AREA <BR>LEGAL
+        <div class="separator"></div>
+        <span>Correlativo exclusivo para el area legal.
+          <BR>(Acceso Restringido)
+         </span>
+    </div>
+      <div class="menu-item" onclick="openPage('https://script.google.com/macros/s/AKfycbwq-6SMCH-GgYzeGFvJ16-4KQ5JZGDlsi2THry6Hw_7ORu27VvqNCBaD3jsxvlfuIkB/exec')">
+          REGISTRO<BR>DE<BR>VALLAS
+          <div class="separator"></div>
+          <span>Registra las vallas que inspeccionaste en el mes. <BR>Recuerda subir solo las fotos  de los que tiene emplazamiento efectivo de publicidad.</span>
+      </div>
+      <div class="menu-item" onclick="'#'">
+          BUSCAR <br>ELEMENTOS <br>PUBLICITARIOS
+          <div class="separator"></div>
+          <span>En breve te proporcionaremos una herramienta que te permitirá buscar elementos publicitarios y tener cierta información respecto a ellos.</span>
+      </div>
+      <div class="menu-item" onclick="openPage('https://arcm-sys.net/upufis/')">
+          FISCALIZACION
+          <div class="separator"></div>
+          <span>Estamos desarrollando una aplicación para registrar las fiscalizaciones, que genere la NOTA y el cuadro de multas  </span>
+      </div>
+  </div>
+  <div class="footer">U.P.U.</div>
+
+  <script>
+      function openPage(url) {
+          window.open(url, '_blank');
+      }
+  </script>
+</body>
+</html>
