@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publicidad Urbana</title>
@@ -11,6 +12,7 @@
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
+
         body {
             display: flex;
             justify-content: center;
@@ -19,12 +21,14 @@
             background: linear-gradient(to bottom, #2a0a3a, #000);
             flex-direction: column;
         }
+
         .menu {
             display: flex;
             width: 100vw;
             height: 90vh;
             position: relative;
         }
+
         .menu-item {
             flex: 1;
             display: flex;
@@ -41,9 +45,11 @@
             border-radius: 8px;
             backdrop-filter: blur(5px);
         }
+
         .menu-item:hover {
             background: rgba(42, 10, 58, 0.7);
         }
+
         .menu-item span {
             margin-top: 10px;
             font-size: 15px;
@@ -54,12 +60,14 @@
             max-width: 80%;
             font-weight: lighter;
         }
+
         .separator {
             width: 50%;
             height: 2px;
             background-color: rgba(255, 255, 255, 0.8);
             margin: 10px 0;
         }
+
         .footer {
             width: 100vw;
             height: 10vh;
@@ -72,71 +80,89 @@
             text-shadow: 0 0 3px rgba(255, 255, 0, 0.6), 0 0 6px rgba(255, 255, 0, 0.4), 0 0 9px rgba(255, 255, 0, 0.2);
             animation: glow 2s infinite alternate;
         }
+
         @keyframes glow {
             0% {
                 text-shadow: 0 0 3px rgba(255, 255, 0, 0.6), 0 0 6px rgba(255, 255, 0, 0.4), 0 0 9px rgba(255, 255, 0, 0.2);
                 color: white;
             }
+
             100% {
                 text-shadow: 0 0 6px rgba(255, 200, 0, 0.8), 0 0 9px rgba(255, 200, 0, 0.6), 0 0 12px rgba(255, 200, 0, 0.4);
                 color: yellow;
             }
         }
+
         @media (max-width: 768px) {
             .menu {
                 flex-direction: column;
                 height: auto;
                 overflow-y: auto;
             }
+
             .menu-item {
                 flex: none;
                 width: 100%;
                 padding: 20px 0;
             }
+
             .footer {
                 font-size: 24px;
             }
         }
     </style>
 </head>
+
 <body>
-  <div class="menu">
-      <div class="menu-item" onclick="openPage('https://docs.google.com/spreadsheets/d/1RTVn0q-g2OH12Y2KnYwuuhVhSMngjS6lqfaXqm6QQIM/edit?gid=1761064970#gid=1761064970')">
-          CORRELATIVOS<BR>AREA<BR>TECNICA
-          <div class="separator"></div>
-          <span>Obtén un numero correlativo para el documento que estas realizando.
-            <BR>Trata de no omitir ningún dato solicitado, y asi se podrá hacer seguimiento.
-           </span>
-      </div>
-      <div class="menu-item" onclick="openPage('https://docs.google.com/spreadsheets/d/1vHyco-6_uGyB-ZLznRTPSyYw-_IdTIHscgHyMRT_aSs/edit?usp=sharing')">
-        CORRELATIVOS<BR>
-        AREA <BR>LEGAL
-        <div class="separator"></div>
-        <span>Correlativo exclusivo para el area legal.
-          <BR>(Acceso Restringido)
-         </span>
-    </div>
-      <div class="menu-item" onclick="openPage('https://script.google.com/macros/s/AKfycbzeaNTYTw38nIfaBTtFIhQRUQrui_l3a7ngNAc2QJ8VxYYu42C8XOo0SqDCu1vDT-7P3g/exec')">
-          REGISTRO<BR>DE<BR>VALLAS
-          <div class="separator"></div>
-          <span>Registra las vallas que inspeccionaste en el mes. <BR>Recuerda subir solo las fotos  de los que tiene emplazamiento efectivo de publicidad.</span>
-      </div>
-    <div class="menu-item" onclick="openPage('https://script.google.com/macros/s/AKfycbztXipbKvtJfRrXOCzqzrla84YgnumsvPtUpDw5sfgFNfj8MGOE8Ukd6ZVGRnNaO7NfxA/exec')">
-          BUSCAR <br>ELEMENTOS <br>PUBLICITARIOS
-          <div class="separator"></div>
-          <span>Esta es una herramienta que te permite buscar elementos publicitarios en OFFLINE.</span>
-      </div>
+    <div class="menu">
+        <div class="menu-item"
+            onclick="openPage('https://docs.google.com/spreadsheets/d/1RTVn0q-g2OH12Y2KnYwuuhVhSMngjS6lqfaXqm6QQIM/edit?gid=1761064970#gid=1761064970')">
+            CORRELATIVOS<BR>AREA<BR>TECNICA
+            <div class="separator"></div>
+            <span>Obtén un numero correlativo para el documento que estas realizando.
+                <BR>Trata de no omitir ningún dato solicitado, y asi se podrá hacer seguimiento.
+            </span>
+        </div>
+        <div class="menu-item"
+            onclick="openPage('https://docs.google.com/spreadsheets/d/1vHyco-6_uGyB-ZLznRTPSyYw-_IdTIHscgHyMRT_aSs/edit?usp=sharing')">
+            CORRELATIVOS<BR>
+            AREA <BR>LEGAL
+            <div class="separator"></div>
+            <span>Correlativo exclusivo para el area legal.
+                <BR>(Acceso Restringido)
+            </span>
+        </div>
+        <div class="menu-item"
+            onclick="openPage('https://script.google.com/macros/s/AKfycbzeaNTYTw38nIfaBTtFIhQRUQrui_l3a7ngNAc2QJ8VxYYu42C8XOo0SqDCu1vDT-7P3g/exec')">
+            REGISTRO<BR>DE<BR>VALLAS
+            <div class="separator"></div>
+            <span>Registra las vallas que inspeccionaste en el mes. <BR>Recuerda subir solo las fotos de los que tiene
+                emplazamiento efectivo de publicidad.</span>
+        </div>
+        <div class="menu-item"
+            onclick="openPage('https://script.google.com/macros/s/AKfycbwu-OobvZOdEJyla03vR895qQlP4Y6yBI9WL3YriLcuFmq8WlSz-mcWi0ghJg5pTxH0Sw/exec')">
+            BUSCAR <br>VALLAS<br>INSPECCIONADAS
+            <div class="separator"></div>
+            <span>Buscar imágenes de Vallas Inspeccionadas por los técnicos de la UPU.</span>
+        </div>
+        <div class="menu-item"
+            onclick="openPage('https://script.google.com/macros/s/AKfycbx8Ypx3No7eucj13bULp1KwB7vuPQtRooDvEVZYCny6TzACWQu1bjCKQc9lXhjhqr9aMQ/exec')">
+            BUSCAR <br>ELEMENTOS <br>PUBLICITARIOS <br>REGISTRADOS
+            <div class="separator"></div>
+            <span>Esta es una herramienta que te permite buscar elementos publicitarios registrados y activos OFFLINE.</span>
+        </div>
         <div class="menu-item" onclick="openPage('https://arcm-sys.net/upufis/')">
-          FISCALIZACION
-          <div class="separator"></div>
-          <span>Estamos desarrollando una aplicación para registrar las fiscalizaciones, que genere la NOTA y el cuadro de multas  </span>
-      </div>
-  </div>
-  <div class="footer">U.P.U.</div>
-  <script>
-      function openPage(url) {
-          window.open(url, '_blank');
-      }
-  </script>
+            FISCALIZACION
+            <div class="separator"></div>
+            <span>Aplicación Web para registrar las fiscalizaciones, que genere la NOTA y el cuadro de multas </span>
+        </div>
+    </div>
+    <div class="footer">U.P.U.</div>
+    <script>
+        function openPage(url) {
+            window.open(url, '_blank');
+        }
+    </script>
 </body>
+
 </html>
